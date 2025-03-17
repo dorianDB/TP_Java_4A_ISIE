@@ -2,8 +2,8 @@ package com.polytechtours.model;
 
 import java.time.LocalTime;
 public class Heure {
-    private int heures;
-    private int minutes;
+    private byte heures;
+    private byte minutes;
 
     public Heure(int heures, int minutes) throws Exception {
         setHeuresMinutes(heures, minutes);
@@ -11,8 +11,8 @@ public class Heure {
 
     public Heure() {
         LocalTime now = LocalTime.now();
-        this.heures = now.getHour();
-        this.minutes = now.getMinute();
+        this.heures = (byte) now.getHour();
+        this.minutes = (byte) now.getMinute();
     }
 
     public int getHeures() {
@@ -27,14 +27,14 @@ public class Heure {
         if (hh < 0 || hh > 23) {
             throw new Exception("Les heures doivent être comprises entre 0 et 23.");
         }
-        this.heures = hh;
+        this.heures = (byte) hh;
     }
 
     public void setMinutes(int mm) throws Exception {
         if (mm < 0 || mm > 59) {
             throw new Exception("Les minutes doivent être comprises entre 0 et 59.");
         }
-        this.minutes = mm;
+        this.minutes = (byte) mm;
     }
 
     public void setHeuresMinutes(int hh, int mm) throws Exception {
@@ -54,7 +54,7 @@ public class Heure {
         } else {
             totalMinutes %= 24 * 60;
         }
-        this.heures = (totalMinutes / 60);
-        this.minutes = (totalMinutes % 60);
+        this.heures = (byte) (totalMinutes / 60);
+        this.minutes = (byte) (totalMinutes % 60);
     }
 }
