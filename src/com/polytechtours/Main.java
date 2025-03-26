@@ -2,6 +2,10 @@ package com.polytechtours;
 
 import com.polytechtours.model.*;
 
+import com.polytechtours.model.Animal.Sexe;
+import static com.polytechtours.model.Animal.nbAnimals;
+
+
 public class Main {
     public static void main(String[] args) {
         /*
@@ -106,5 +110,14 @@ public class Main {
         System.out.println(salarie);
         System.out.println(freelance);
 
+        Animal[] animaux = new Animal[5];
+        animaux[0] = new Animal("Rex", Sexe.MASCULIN);
+        animaux[1] = new Mammifere("Médor", Sexe.INDETERMINE);
+        animaux[2] = new Humain("Jacques", Sexe.MASCULIN);
+        animaux[3] = new Vache("Noiraude", Sexe.FEMININ);
+        animaux[4] = new Vache("Gnnnnn", Sexe.NEUTRE);
+        for(Animal animal : animaux)
+            System.out.println(animal);
+        System.out.println("Nombre d'animaux : " + nbAnimals);
     }
 }
