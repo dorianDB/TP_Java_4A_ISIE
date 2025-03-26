@@ -62,22 +62,22 @@ public class Main {
 
         System.out.println("S1 : " + s1 + "\nS2 : " + s2 + "\nS3 : " + s3);
         */
-        CompteBancaire compte1 = new CompteBancaire("37F458FES901", "Dorian Brisson", 2500, -500);
-        CompteBancaire compte2 = new CompteBancaire("37F458FES817", "Victor Rivet", 1500, -300);
+//        CompteBancaire compte1 = new CompteBancaire("37F458FES901", "Dorian Brisson", 2500, -500);
+//        CompteBancaire compte2 = new CompteBancaire("37F458FES817", "Victor Rivet", 1500, -300);
+//
+//        System.out.println(compte1);
+//        System.out.println(compte2);
+//
+//        compte1.deposer(500);
+//        compte1.afficherSolde();
+//
+//        compte1.virer(500, compte2);
+//
+//        compte1.afficherSolde();
+//        compte2.afficherSolde();
 
-        System.out.println(compte1);
-        System.out.println(compte2);
 
-        compte1.deposer(500);
-        compte1.afficherSolde();
-
-        compte1.virer(500, compte2);
-
-        compte1.afficherSolde();
-        compte2.afficherSolde();
-
-
-
+        /*
         try {
             Heure heure1 = new Heure(14, 30);
             System.out.println("Heure initiale : " + heure1);
@@ -94,10 +94,17 @@ public class Main {
             heure1.avancerMinutes(120);
             System.out.println("Heure après avancer de 120 minutes : " + heure1);
 
-            heure1.avancerMinutes(-59);
+            heure1.avancerMinutes(-(48*60));
             System.out.println("Heure après reculer de 59 minutes : " + heure1);
         } catch (Exception e) {
             System.out.println("Erreur : " + e.getMessage());
-        }
+        }*/
+
+        Employe salarie = new Salarie("Jane Doe", "F439", 2010, 3200.0);
+        Employe freelance = new Freelance("John Smith", "H051", 2022, 120, 25.5);
+
+        System.out.println(salarie);
+        System.out.println(freelance);
+
     }
 }

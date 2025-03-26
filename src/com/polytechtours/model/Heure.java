@@ -49,9 +49,10 @@ public class Heure {
 
     public void avancerMinutes(int min) {
         int totalMinutes = heures * 60 + minutes + min;
-        if (totalMinutes < 0) {
+        while (totalMinutes < 0) {
             totalMinutes = (24 * 60 + totalMinutes) % (24 * 60);
-        } else {
+        }
+        if (totalMinutes > 0){
             totalMinutes %= 24 * 60;
         }
         this.heures = (byte) (totalMinutes / 60);
