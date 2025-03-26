@@ -104,8 +104,8 @@ public class Main {
             System.out.println("Erreur : " + e.getMessage());
         }*/
 
-        Employe salarie = new Salarie("Jane Doe", "F439", 2010, 3200.0);
-        Employe freelance = new Freelance("John Smith", "H051", 2022, 120, 25.5);
+        Employe salarie = new Salarie("Dorian Brisson", "F439", 2010, 3200.0);
+        Employe freelance = new Freelance("Damien Lorigeon", "H051", 2022, 120, 25.5);
 
         System.out.println(salarie);
         System.out.println(freelance);
